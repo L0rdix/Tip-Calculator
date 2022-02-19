@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --primary-c: hsl(172, 67%, 45%);
+    
+    /* Neutral */
+    --very-dark-c: hsl(183, 100%, 15%);
+    --darker-g-c: hsl(186, 14%, 43%);
+    --dark-g-c: hsl(184, 14%, 56%);
+    --light-g-c: hsl(185, 41%, 84%);
+    --lighter-g-c: hsl(189, 41%, 97%);
+
+    --clr-white: hsl(0, 0%, 100%);
+
+
+    --font-size: 1.5rem;
+
+    --body-font: 'Space Mono', monospace;
+
+    --font-medium: 400;
+    --font-semi-bold: 500;
+    --font-bold: 700;
+}
+
+/*      Hide Arrows from Input      */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+*{
+    font-family: var(--body-font);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*         Main Stuff               */
+
+button{
+    appearance: none;
+    border: none;
+    cursor: pointer;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: var(--font-size);
+    background-color: var(--light-g-c);
+}
+
+h1{
+    margin-top: 5rem;
+    text-align: center;
+    color: var(--very-dark-c);
+}
+
+.logo{
+    display: block;
+    margin: 50px auto 40px;
+}
+
+.calc
+{
+    text-align: initial;
+}
+
+.section{
+    position: relative;
+}
+
+.sec_container{
+    background-color: var(--clr-white);
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    grid-template-columns: 1fr max-content;
+    column-gap: 3rem;
+    max-width: 768px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+
+.label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: var(--font-bold);
+    font-size: 15px;
+    color: var(--dark-g-c);
+}
+
+
+
+/*      Bill        */
+.bill-form{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.people-form{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.bill input{
+    background: url(../tip-calculator-app-main/images/icon-dollar.svg) no-repeat 15px center;
+}
+
+.people input{
+    background: url(../tip-calculator-app-main/images/icon-person.svg) no-repeat 15px center;
+}
+
+.bill input, 
+.people input{
+    background-color: var(--lighter-g-c);
+    padding-right: 10px;
+    width: 100%;
+    height: 45px;
+    text-align: right;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: var(--font-bold);
+    color: var(--very-dark-c);
+}
+
+.bill input:focus-visible.valid, .people input:focus-visible.valid, input:focus-visible.custom-tip.valid{
+    outline:  var(--primary-c) auto 1px;
+}
+
+.bill input.invalid, .people input.invalid, input.custom-tip.invalid{
+    outline:  red auto 1px;
+}
+
+.people-error{
+    color: red;
+    padding-top: 0.5rem;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+/*      Sides       */
+.l-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1em auto;
+    padding: 16px;
+    color: var(--dark-g-c);
+    margin-bottom: 0;
+}
+.r-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: 1.5em;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--very-dark-c);
+    color: var(--clr-white);
+}
+
+/*      Tips        */
+.tip-selector{
+    border-radius: 5px;
+    background-color: var(--very-dark-c);
+    color: var(--clr-white);
+    transition: background-color .1s linear, color .1s linear;
+    font-size: 20px;
+    font-weight: var(--font-semi-bold);
+}
+.custom-tip{
+    cursor: pointer;
+    font-size: 20px;
+    background-color: var(--lighter-g-c);
+    border-color: transparent;
+    border-radius: 5px;
+    font-weight: var(--font-bold);
+}
+.tip-selector:hover{
+    background-color: var(--light-g-c);
+    color: var(--very-dark-c);
+}
+.tip-selector:focus, .tip-selector.selected{
+    background-color: var(--primary-c);
+    color: var(--very-dark-c);
+    font-weight: var(--font-bold);
+}
+.tips_container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.tips_container > * {
+    width: 48%;
+    height: 45px;
+    text-align:center;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+/* Button */
+.reset{
+    margin-top: 1em;
+    border-radius: 5px;
+    background-color: var(--primary-c);
+    transition: background-color .1s linear, color .1s linear;
+    padding: 0.5em 0.5em;
+    font-size: 30px;
+    color: var(--very-dark-c);
+    font-weight: var(--font-bold);
+}
+
+.r-bg{
+    display: flex;
+}
+
+.left-side{
+    align-self: flex-start;
+    padding-right: 0.8rem;
+}
+
+
+.right-side{
+    margin-left: 1.5em;
+    align-self: flex-end;
+    align-self: flex-start;
+    text-align: right;
+}
+
+.small-text{
+    font-size: 12px;
+    color: var(--dark-g-c);
+}
+
+.amount{
+    font-size: 36px;
+    color: var(--primary-c);
+    font-weight: var(--font-bold);
+    padding-top: 0.3em;
+}
+
+.text{
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+
+
+.attribution { 
+    font-size: 13px; 
+    text-align: center; 
+    position: relative;
+    bottom: 0;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media screen and (min-width: 1024px){
+
+    .logo{
+        display: block;
+        margin: 4.125em auto 2.5em;
+    }
+
+    
+    .sec_container{
+        display: flex;
+        background-color: var(--clr-white);
+        border-radius: 1rem;
+        padding: 1rem 1rem;
+        grid-template-columns: 1fr max-content;
+        column-gap: 3rem;
+        max-width: 48em;
+    }
+
+        
+    .r-side{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        padding: 1.5em;
+        margin-top: 0.5em;
+        width: 50%;
+        border-radius: 20px;
+        background-color: var(--very-dark-c);
+    }
+        
+    .section{
+        display: flex;
+        justify-content: center;
+    }
+
+        
+    .r-bg{
+        margin-top: 0.5em;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-side{
+        align-self: flex-start;
+    }
+
+    .right-side{
+        margin-left: 2.5em;
+        align-self: flex-end;
+        text-align: right;
+    }
+
+    .tips_container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 33.333%;
+    }
+
+    .tips_container > * {
+        width: 33%;
+        height: 45px;
+        text-align: center;
+        padding: 0;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+    
+    .attribution { 
+        position: absolute;
+        font-size: 18px;
+    }
+
+    .people-error{
+        margin-top: 0.5em;
+    }
+
+    
+.amount{
+    padding-top: 0;
+}
+}

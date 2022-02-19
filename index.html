@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../Tip Calculator/tip-calculator-app-main/images/favicon-32x32.png">
+
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <img  class="logo" src="tip-calculator-app-main/images/logo.svg" alt="Splitter logo">
+
+    <section class="calc section">
+        <div class="sec_container">
+            <!-- Left Side -->
+            <div class="l-side">
+                <div class="bill-form">
+                    <div class="bill">
+                        <label class="label" for="bill">Bill</label>
+                        <input type="number" id="bill" name ="bill" placeholder="0" min="0" data-bill>
+                    </div>
+                </div>
+
+                <!-- Tip Selection -->
+                <div class="select-tip">
+                    <span class="label">Select Tip %</span>
+                    <div class="tips_container">
+                        <button class="tip-selector" type="button" data-tip-value="5">5%</button>
+                        <button class="tip-selector" type="button" data-tip-value="10">10%</button>
+                        <button class="tip-selector" type="button" data-tip-value="15">15%</button>
+                        <button class="tip-selector" type="button" data-tip-value="25">25%</button>
+                        <button class="tip-selector" type="button" data-tip-value="50">50%</button>
+                        <input class="custom-tip" type="number" id="custom-tip" name="custom-tip" placeholder="Custom" min="0" data-custom-tip>
+                    </div>
+                </div>
+                
+                <div class="people-form">
+                    <div class="people">
+                        <label class="label" for="people">Number of People</label>
+                        <input type="number" id="people" name ="people" placeholder="0" min="0" data-people>
+                    </div>
+
+                    <span class="people-error">Can't be zero</span>
+                </div>
+            </div>
+
+
+            <!-- Right Side -->
+            <div class="r-side">
+                <div class="r-bg">
+                    <div class="left-side">
+                        <div class="tip_amount">
+                            <p class="text">Tip Amount</p>
+                            <p class="small-text">/ person</p>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="total_amount">
+                            <p class="text">Total</p>
+                            <p class="small-text">/ person</p>
+                        </div>
+                    </div>
+                    
+                    <div class="right-side">
+                        <p class="amount" id="tip-amount" data-tip-person>$0.00</p>
+                        <br>
+                        <br>
+                        <p class="amount" id="total-amount" data-total-person>$0.00</p>
+                    </div>
+                </div>
+
+                <button class="reset" type="button" data-reset-button disabled>RESET</button>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/L0rdix" target="_blank">Amir</a>.
+    </div>
+
+
+    <script src="../Tip Calculator/JS/tip.js"></script>
+</body>
+</html>
