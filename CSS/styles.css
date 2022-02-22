@@ -85,8 +85,6 @@ h1{
     grid-template-columns: 1fr max-content;
     column-gap: 3rem;
     max-width: 768px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
 }
 
 
@@ -355,4 +353,11 @@ h1{
 .amount{
     padding-top: 0;
 }
+}
+
+@media screen and (min-width: 500px){
+    .sec_container{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
