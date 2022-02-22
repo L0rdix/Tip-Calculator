@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://github.com/L0rdix/Tip-Calculator](https://github.com/L0rdix/Tip-Calculator)
+- Live Site URL: [https://l0rdix.github.io/Tip-Calculator/](https://l0rdix.github.io/Tip-Calculator/)
 
 ## My process
 
