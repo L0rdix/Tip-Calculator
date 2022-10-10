@@ -12,6 +12,8 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ## Overview
 
+![](./screenshot.png)
+
 ### The challenge
 
 Users should be able to:
